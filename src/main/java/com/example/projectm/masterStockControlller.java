@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
-import lombok.var;
+
 
 @Controller
 public class masterStockControlller{
@@ -65,6 +65,15 @@ public class masterStockControlller{
         return model;
     }
 
+
+    @ResponseBody
+    @RequestMapping(value = "/showMasterStock", method = RequestMethod.GET)
+    public List<masterstock> getItems(){
+        
+      
+        return masterrepo.findAll();
+    }
+
     @ResponseBody   
     @RequestMapping(value = "/updateItem", method = RequestMethod.PUT)
     public  String updateItem(@Valid @ModelAttribute("mastermodel") masterstock_model msmd, 
@@ -82,16 +91,15 @@ public class masterStockControlller{
         mr.setQuantity(quantity);
         mr.setSuppplierName(supplierName);
         mr.setQuanlity(quality); 
-        mr.setStatus("raw");
+        mr.setStatus("Pass");
         masterrepo.save(mr);
             
          
 
-        return "redirect:/masterstock"; 
+        return "Stock successfully updated! Return to main screen";
     }
 
-       
-
+  
     @ResponseBody
     @RequestMapping(value = "/goodrecievednotice", method = RequestMethod.GET)
     public List<masterstock> confirmedQualityItems(){
