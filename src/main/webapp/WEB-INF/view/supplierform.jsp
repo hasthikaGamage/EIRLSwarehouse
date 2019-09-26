@@ -23,10 +23,7 @@
                   </form:select>     	
                </td>
             </tr>   	  
-              <tr>
-                    <td><form:label path="suppplierName">  Supplier name  </form:label></td>
-                    <td><form:input path="suppplierName"/></td>
-                </tr>
+        
                 <tr>
                     <td><form:label path="quantity">Quantity </form:label></td>
                     <td><form:input path="quantity"/></td>

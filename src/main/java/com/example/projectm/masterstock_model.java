@@ -25,9 +25,10 @@ public class masterstock_model {
 		this.binID = binID;
 	}
 
+    
  
     private String status;
-    private String suppplierName;
+ 
     private String productName;
     private int quantity;
      private String quanlity;
@@ -48,14 +49,7 @@ public class masterstock_model {
         this.status = status;
     }
 
-    public String getSuppplierName() {
-        return suppplierName;
-    }
-
-    public void setSuppplierName(String suppplierName) {
-        this.suppplierName = suppplierName;
-    }
-
+    
     public String getProductName() {
         return productName;
     }

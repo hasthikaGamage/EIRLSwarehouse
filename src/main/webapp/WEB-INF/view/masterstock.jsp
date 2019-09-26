@@ -34,7 +34,7 @@ tr:nth-child(even) {
 <table border="2">
 
  <th>binID</th>
-    <th>Supplier name</th>
+ 
     <th>Product name</th> 
     <th>Quantity </th> 
         <th>Status </th> 
@@ -43,7 +43,7 @@ tr:nth-child(even) {
     <c:forEach var="var" items="${list}">
       <tr>
         <td>${var.getBinID()}</td>
-        <td>${var.getSuppplierName()}</td> 
+    
         <td>${var.getProductName()}</td>
                 <td>${var.getQuantity()}</td> 
        <td>${var.getStatus()}</td> 
