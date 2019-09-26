@@ -1,6 +1,7 @@
 package com.example.projectm;
 
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -35,7 +36,7 @@ public class masterStockControlller{
     @Autowired
     return_productsRepo returnProductsrepo;
 
-
+    ArrayList<masterstock> mlist = new ArrayList();
 
     @RequestMapping(value = "/supplierform", method = RequestMethod.GET)
     public ModelAndView supplierform() {
@@ -70,8 +71,9 @@ public class masterStockControlller{
     @RequestMapping(value = "/showMasterStock", method = RequestMethod.GET)
     public List<masterstock> getItems(){
         
-      
-        return masterrepo.findAll();
+
+        return mlist;
+        
     }
 
     @ResponseBody   
@@ -92,9 +94,9 @@ public class masterStockControlller{
         mr.setSuppplierName(supplierName);
         mr.setQuanlity(quality); 
         mr.setStatus("Pass");
-        masterrepo.save(mr);
-            
-         
+        masterstock mitem = masterrepo.save(mr);
+        mlist = new ArrayList<>();
+        mlist.add(mitem); 
 
         return "Stock successfully updated! Return to main screen";
     }
