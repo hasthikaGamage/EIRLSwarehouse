@@ -87,7 +87,7 @@ public class masterStockControlller{
             
          
 
-        return "index"; 
+        return "redirect:/masterstock"; 
     }
 
        
