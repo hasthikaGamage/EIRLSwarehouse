@@ -36,7 +36,7 @@ public class masterStockControlller{
     @Autowired
     return_productsRepo returnProductsrepo;
 
-    ArrayList<masterstock> mlist = new ArrayList();
+    ArrayList<masterstock> mlist;
 
     @RequestMapping(value = "/supplierform", method = RequestMethod.GET)
     public ModelAndView supplierform() {
@@ -139,25 +139,25 @@ public class masterStockControlller{
 
     private void goodrecievednoticemethod(masterstock master) {
 
-        String URL = "http://eirls-mm.herokuapp.com/api/goods-received";
-        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleHRlcm5hbCIsImlhdCI6MTU1NTMyNjk2OSwiZXhwIjoxNTU1NDEzMzY5fQ.kDnlreG8p_VcoLh3FVrZI3a8go4IXQCWHBMIGJxNOaMeKsrhPz-Axv3RWiXgsxbQNXmXc4HTx7IQ9622Z20RZw";
+        // String URL = "http://eirls-mm.herokuapp.com/api/goods-received";
+        // String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleHRlcm5hbCIsImlhdCI6MTU1NTMyNjk2OSwiZXhwIjoxNTU1NDEzMzY5fQ.kDnlreG8p_VcoLh3FVrZI3a8go4IXQCWHBMIGJxNOaMeKsrhPz-Axv3RWiXgsxbQNXmXc4HTx7IQ9622Z20RZw";
         
-        RestTemplate template = new RestTemplate();
-        Map payload = new HashMap<String, String>();
+        // RestTemplate template = new RestTemplate();
+        // Map payload = new HashMap<String, String>();
 
-        payload.put("productName", master.getProductName());
-        payload.put("quantity", String.valueOf(master.getQuantity()));
+        // payload.put("productName", master.getProductName());
+        // payload.put("quantity", String.valueOf(master.getQuantity()));
 
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Authorization", "Bearer " + token);
-        headers.setContentType(MediaType.APPLICATION_JSON);
+        // HttpHeaders headers = new HttpHeaders();
+        // headers.add("Authorization", "Bearer " + token);
+        // headers.setContentType(MediaType.APPLICATION_JSON);
 
-        HttpEntity<Map> requestEntity = new HttpEntity<>(payload, headers);
-        ResponseEntity<Object> result = template.exchange(URL, HttpMethod.POST, requestEntity, Object.class);
+        // HttpEntity<Map> requestEntity = new HttpEntity<>(payload, headers);
+        // ResponseEntity<Object> result = template.exchange(URL, HttpMethod.POST, requestEntity, Object.class);
 
-        if (!result.getStatusCode().is2xxSuccessful()) {
+        // if (!result.getStatusCode().is2xxSuccessful()) {
            
-        }
+        // }
     }
 
 }
