@@ -47,11 +47,10 @@ tr:nth-child(even) {
   
     <c:forEach var="var" items="${list}">
       <tr>
-        <td>${var.getDelivery_id()}</td> 
-        <td>${var.getDelivery_date()}</td>
-       <td>${var.getDelivery_location()}</td>
+        <td>${var.getuser_id()}</td> 
+       <td>${var.getaddress()}</td>
        <td>${var.getDelivery_status()}</td>
-       <td>${var.getDelivery_type()}</td> 
+        
      				<td><a href="/updatedeliverystatus"> <button type="submit" class="button" value="${var.getDelivery_id()}" onclick="senddata(this)"  name="cancel">Delivered </button></a> </td>
 
     </tr>
