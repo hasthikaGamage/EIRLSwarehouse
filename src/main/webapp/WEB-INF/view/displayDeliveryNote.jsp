@@ -35,12 +35,10 @@ tr:nth-child(even) {
 
 <table border="2">
 
-    <th>Delivery id</th>
-    
-    <th>Delivery date</th>
-    <th>Delivery location</th>
+    <th>User id</th>
+    <th>Address</th>
     <th>Delivery status</th>
-    <th>Delivery type</th>
+    
     
    
     
