@@ -94,7 +94,7 @@ public class masterStockControlller{
         mr.setProductName(prodname);
         mr.setQuantity(quantity);
         
-        mr.setQuanlity(quality); 
+        mr.setQuality(quality); 
         mr.setStatus("Pass");
         masterstock mitem = masterrepo.save(mr);
         mlist = new ArrayList<>();
@@ -109,7 +109,7 @@ public class masterStockControlller{
     public List<masterstock> confirmedQualityItems(){
         
         
-        List<masterstock> mlist = masterrepo.findByQuanlity("Good");
+        List<masterstock> mlist = masterrepo.findByQuality("Good");
 
         for (masterstock var : mlist) {
 
@@ -117,7 +117,7 @@ public class masterStockControlller{
 
             
         }
-        return masterrepo.findByQuanlity("Good"); 
+        return masterrepo.findByQuality("Good"); 
     }
 
 
@@ -191,7 +191,7 @@ public class masterStockControlller{
                     newB.setOrderItemid(b.getOrderItemid());
                     newB.setUpdatedDate(b.getUpdatedDate());
                     newB.setStatus("Delivered");
-                 //   bomrepo.save(newB);
+                      //bomrepo.save(newB);
                 }
           }
     

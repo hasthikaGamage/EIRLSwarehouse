@@ -41,6 +41,7 @@ tr:nth-child(even) {
     <th>Delivery location</th>
     <th>Delivery status</th>
     <th>Delivery type</th>
+    
    
     
   

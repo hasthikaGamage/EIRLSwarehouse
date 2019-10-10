@@ -92,11 +92,10 @@ public class deliveryController{
 
                 delivery del = new delivery();
           
-                del.setDelivery_date(var.getDelivery_date());
-                del.setDelivery_location(var.getDelivery_location());
-                del.setDelivery_type(var.getDelivery_type());  
+                
+                del.setaddress(var.getaddress()); 
                 del.setDelivery_status(var.getDelivery_status());
-                del.setDelivery_id(var.getDelivery_id());
+                del.setuser_id(var.getuser_id());
                 
                 deliveryrepo.save(del);
 

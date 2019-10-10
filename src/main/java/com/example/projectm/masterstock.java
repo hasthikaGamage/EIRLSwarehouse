@@ -37,16 +37,18 @@ public class masterstock {
     private String productName;
     @Column(name="quantity")
     private int quantity;
-    @Column(name="quanlity")
-    private String quanlity;
-        
-	public String getQuanlity() {
-		return this.quanlity;
-	}
+    @Column(name="quality")
+    private String quality;
 
-	public void setQuanlity(String quanlity) {
-		this.quanlity = quanlity;
-	}
+    public String getQuality() {
+        return this.quality;
+    }
+
+    public void setQuality(String quality) {
+        this.quality = quality;
+    }
+        
+	
 
 
     
